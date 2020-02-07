@@ -64,8 +64,8 @@ export const MAIN_SCRIPT = (
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
     <style>
       .container {
-        width: '${screen || 600}'px;
-        height: '${screen || 600}'px;
+        width: ${screen}'px;
+        height: ${screen}'px;
         border:1px solid #000;
         position:relative
       }
