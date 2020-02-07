@@ -14,6 +14,7 @@ import {MAIN_SCRIPT, PLAYER_FUNCTIONS} from './PlayerScripts';
 
 const YoutubeIframe = (
   {
+    screenWidth,
     height,
     width,
     videoId,
@@ -166,7 +167,14 @@ const YoutubeIframe = (
         style={[styles.webView, webViewStyle]}
         ref={webViewRef}
         originWhitelist={['*']}
-        source={{html: MAIN_SCRIPT(videoId, playList, initialPlayerParams)}}
+        source={{
+          html: MAIN_SCRIPT(
+            videoId,
+            playList,
+            screenWidth,
+            initialPlayerParams,
+          ),
+        }}
         allowsInlineMediaPlayback
         onMessage={onWebMessage}
         userAgent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/77.0.3865.90 Safari/537.36"

@@ -43,6 +43,7 @@ player.seekTo(${seconds}, ${allowSeekAhead})
 export const MAIN_SCRIPT = (
   videoId,
   playList,
+  screen,
   {
     loop = false,
     controls = true,
@@ -63,8 +64,8 @@ export const MAIN_SCRIPT = (
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
     <style>
       .container {
-        width:400px;
-        height:400px;
+        width: '${screen}'px;
+        height: '${screen}'px;
         border:1px solid #000;
         position:relative
       }
