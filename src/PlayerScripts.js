@@ -63,17 +63,17 @@ export const MAIN_SCRIPT = (
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
     <style>
       .container {
-        position: relative;
-        width: 100%;
-        height: 0;
-        padding-bottom: 56.25%;
+        width:400px;
+        height:400px;
+        border:1px solid #000;
+        position:relative
       }
       .video {
-          position: absolute;
-          top: 0;
-          left: 0;
-          width: 100%;
-          height: 100%;
+          position:absolute;
+          top:0;
+          left:0;
+          width:100%;
+          height:100%
       }
     </style>
   </head>
@@ -93,8 +93,6 @@ export const MAIN_SCRIPT = (
       var player;
       function onYouTubeIframeAPIReady() {
         player = new YT.Player('player', {
-          height: '1000',
-          width: '1000',
           videoId: '${videoId || ''}',
           playerVars: {
             playsinline: 1,
