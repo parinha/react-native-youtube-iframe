@@ -43,7 +43,8 @@ player.seekTo(${seconds}, ${allowSeekAhead})
 export const MAIN_SCRIPT = (
   videoId,
   playList,
-  screen,
+  iframeWidth,
+  iframeHeight,
   {
     loop = false,
     controls = true,
@@ -68,8 +69,8 @@ export const MAIN_SCRIPT = (
         padding: 0;
       }
       .container {
-        width: ${screen}px;
-        height: ${screen}px;
+        width: ${iframeWidth}px;
+        height: ${iframeHeight}px;
         border:1px solid #000;
         position:relative
       }

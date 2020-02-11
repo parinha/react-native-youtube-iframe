@@ -14,7 +14,8 @@ import {MAIN_SCRIPT, PLAYER_FUNCTIONS} from './PlayerScripts';
 
 const YoutubeIframe = (
   {
-    screenWidth,
+    iframeWidth,
+    iframeHeight,
     height,
     width,
     videoId,
@@ -171,7 +172,8 @@ const YoutubeIframe = (
           html: MAIN_SCRIPT(
             videoId,
             playList,
-            screenWidth,
+            iframeWidth,
+            iframeHeight,
             initialPlayerParams,
           ),
         }}
